@@ -6,7 +6,7 @@
 
 # Make sure each ruby method returns a string containing a valid SQL statement.
 
-#ORDER BY = sort by specific columns. 
+#ORDER BY = sort by specific columns.
 #GROUP BY = summarize unique combinations of columns/values
 
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_name
@@ -25,8 +25,8 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
-  "SELECT users.name, SUM(pledges.amount) FROM users JOIN pledges ON users.id = pledges.user_id GROUP BY pledges.amount ORDER BY users.name;"
-#select users.name and sum(pledges) group by users.name, sort by amount then users.name. 
+  "SELECT users.name, SUM(pledges.amount) FROM users JOIN pledges ON users.id = pledges.user_id GROUP BY users.name ORDER BY pledges.amount ;"
+#select users.name and sum(pledges) group by users.name, sort by amount then users.name.
 end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
